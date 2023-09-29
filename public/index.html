@@ -1,0 +1,452 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Appblocks X Hacktoberfest</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0">
+        <link href="/assets/images/favicon.ico" rel="shortcut icon" type="image/x-icon">
+        <link href="/assets/css/styles.css" rel="stylesheet">
+        <link href="/assets/css/main.css" rel="stylesheet">
+
+        <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-KKG5CWK');</script>
+<!-- End Google Tag Manager -->
+    </head>
+    <body>
+        
+<!-- Google Tag Manager (noscript) -->
+<noscript>
+<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KKG5CWK"
+height="0" width="0" style="display:none;visibility:hidden"></iframe>
+</noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+            <header id="nav-header" class="w-full fixed top-0 left-0 bg-[#242424] z-50 px-4 md:px-6 lg:px-10 xl:px-16">
+  <div
+    class="max-w-7xl w-full mx-auto flex flex-wrap items-center justify-between min-h-[72px] py-[18px] relative">
+    <a href="/" class="focus:outline-none flex items-center space-x-3"><img class="max-w-[72px]" src="../../assets/images/logo.svg"><img class="hidden lg:inline-block" src="../../assets/images/logo-txt.svg"></a>
+    <button onclick="showmenu(this)" type="button"
+      class="inline-flex items-center justify-center p-2 ml-3 md:hidden focus:outline-none h-9"
+      aria-controls="navbar-default" aria-expanded="false">
+      <span class="sr-only">Open main menu</span>
+      <span class="hamburger-icon"></span>
+    </button>
+    <div id="navbar-responsive"
+      class="nav-menu-wrapper w-full md-lt:basis-full top-[72px] left-0 md:flex items-center md:w-auto md:space-x-3 md-lt:bg-[#110D17] md-lt:overflow-hidden">
+      <ul
+        class="flex flex-col my-3 md:flex-row md:items-center md-lt:space-y-2 md:space-x-3 md:pl-2 md:my-0 text-white/80">
+        <li>
+          <a href="#techSection" class="block hover:no-underline hover:bg-[#24292E] transition-all md:px-2 lg:px-4 py-2 text-base font-medium">What’s Appblocks</a>
+        </li>
+        <li>
+          <a href="#opensource" class="block hover:no-underline hover:bg-[#24292E] transition-all md:px-2 lg:px-4 py-2 text-base font-medium">Projects to contribute</a>
+        </li>
+        <li>
+          <a href="https://hacktoberfest-register.appblocks.com/" target="_blank" class="block clip-path-button transition-all bg-gradient-purple float-left p-px">
+         <span class="bg-[#242424] hover:bg-white hover:text-primary px-5 py-1.5 h-full float-left flex justify-center items-center clip-path-button text-base font-medium">Register Now</span>
+        </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</header>
+<script>
+  function showmenu() {
+    document.getElementById("nav-header").classList.toggle("expanded-nav");
+  }
+</script>
+            
+<div class="w-full pt-[72px] min-h-[calc(100vh-230px)]">
+  <section class="w-full float-left py-10 md:py-20 px-4 md:px-6 lg:px-10 xl:px-16">
+    <div class="max-w-[1040px] w-full mx-auto text-white clearfix flex items-center space-x-4 banner-mobile">
+      <div class="md-lt:w-full md:flex-shrink-0">
+        <div class="w-full float-left">
+          <h2 class="flexa-bold text-5xl md:text-7xl mb-4 primary-gradient-text float-left">DRY Days!</h2>
+        </div>
+        <p class="font-medium text-white/80 text-xl mb-4">Appblocks Joins Hacktoberfest!</p>
+        <a target="_blank" href="https://discord.com/invite/b7YSVvHp2x"
+          class="float-left text-base font-medium clip-path-button mt-4 bg-primary hover:bg-[#fff] hover:text-primary border border-transparent hover:border-[#6F42C1] transition-all px-5 py-2">Join
+          Discord</a>
+      </div>
+      <div class="flex-grow justify-end text-right hidden md:flex">
+        <img class="max-w-full" src="./assets/images/icons/banner-right.png" />
+      </div>
+    </div>
+  </section>
+  <section class="w-full float-left px-4 md:px-6 lg:px-10 xl:px-16">
+    <div class="marquee-wrapper max-w-[1040px] w-full mx-auto  py-4 my-5  whitespace-nowrap">
+      <marquee scrollamount="12" behavior="scroll"
+        class="text-white/80 text-lg md:text-xl font-medium flex items-center whitespace-nowrap">Join the biggest
+        dev-fest of
+        2023! <img class="inline" src="./assets/images/icons/star.svg" /> Code and win exciting prizes <img
+          class="inline" src="./assets/images/icons/star.svg" />
+        Work on promising open-source projects</marquee>
+    </div>
+  </section>
+
+  <section class="w-full float-left py-10 md:py-20 px-4 md:px-6 lg:px-10 xl:px-16">
+    <div class="max-w-[1040px] w-full mx-auto clearfix">
+      <div class="w-full float-left flex space-x-12">
+        <p class="text-base md:text-xl font-medium text-white/80">Tired of coding the same business use case a million
+          times?<br />
+          Ever wished to have blocks of code stored and reused as you please?<br />
+          Well, that’s precisely what we have!</p>
+        <img src="./assets/images/icons/qn-icon.svg">
+      </div>
+      <div class="w-full float-left flex flex-col md-lt:space-y-6 md:flex-row md:space-x-12 mt-20">
+        <img class="max-w-[200px] w-full md-lt:mx-auto" src="./assets/images/logo-xl.svg">
+        <div class="flex md:flex-grow flex-col space-y-5">
+          <p class="float-left flexa-medium text-2xl md:text-3xl primary-gradient-text self-start">Introducing
+            Appblocks.</p>
+          <p class="text-base md:text-xl font-medium text-white/80">Create robust enterprise applications using reusable
+            code and tools, or leverage fully developed applications as a foundation for your projects!</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="w-full float-left py-10 md:py-20 px-4 md:px-6 lg:px-10 xl:px-16">
+    <div class="max-w-[1040px] w-full mx-auto clearfix">
+      <h2 class="flexa-medium text-2xl md:text-3xl text-white/80 m-0 flex items-center">We &nbsp;<img
+          src="./assets/images/icons/love-icon.svg" />&nbsp;
+        Opensource</h2>
+      <div class="w-full grid grid-cols-2 md:grid-cols-4 gap-x-6 gap-y-10 mt-16">
+        <a href="https://github.com/appblocks-hub/BB-CLI" target="_blank"
+          class="w-full float-left p-0.5 cursor-pointer folder-shape bg-gradient-purple">
+          <div
+            class="w-full h-full flex flex-col justify-end space-y-4 px-6 pb-5 pt-10 bg-[#242424] folder-shape-inner">
+            <img class="max-w-[26px] mb-1" src="assets/images/icons/bb-cli-icon.svg" />
+            <p class="text-lg md:text-xl font-medium text-white leading-tight">BB CLI</p>
+            <p class="text-sm md:text-base underline font-bold text-primary">Explore</p>
+          </div>
+        </a>
+        <a href="https://github.com/appblocks-hub/js-sdk" target="_blank"
+          class="w-full float-left p-0.5 cursor-pointer folder-shape bg-gradient-purple">
+          <div
+            class="w-full h-full flex flex-col justify-end space-y-4 px-6 pb-5 pt-10 bg-[#242424] folder-shape-inner">
+            <img class="max-w-[26px] mb-1" src="assets/images/icons/js-sdk-icon.svg" />
+            <p class="text-lg md:text-xl font-medium text-white leading-tight">JS SDK</p>
+            <p class="text-sm md:text-base underline font-bold text-primary">Explore</p>
+          </div>
+        </a>
+        <a href="https://github.com/appblocks-hub/node-sdk" target="_blank"
+          class="w-full float-left p-0.5 cursor-pointer folder-shape bg-gradient-purple">
+          <div
+            class="w-full h-full flex flex-col justify-end space-y-4 px-6 pb-5 pt-10 bg-[#242424] folder-shape-inner">
+            <img class="max-w-[26px] mb-1" src="assets/images/icons/node-sdk-icon.svg" />
+            <p class="text-lg md:text-xl font-medium text-white leading-tight">Node SDK</p>
+            <p class="text-sm md:text-base underline font-bold text-primary">Explore</p>
+          </div>
+        </a>
+        <a href="https://docs.appblocks.com" target="_blank"
+          class="w-full float-left p-0.5 cursor-pointer folder-shape bg-gradient-purple">
+          <div
+            class="w-full h-full flex flex-col justify-end space-y-4 px-6 pb-5 pt-10 bg-[#242424] folder-shape-inner">
+            <img class="max-w-[26px] mb-1" src="assets/images/icons/docs-icon.svg" />
+            <p class="text-lg md:text-xl font-medium text-white leading-tight">Docs</p>
+            <p class="text-sm md:text-base underline font-bold text-primary">Explore</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="w-full float-left pt-10 md:pt-20 pb-6 px-4 md:px-6 lg:px-10 xl:px-16">
+    <div class="max-w-[1040px] w-full mx-auto clearfix">
+      <h2 class="flexa-medium text-2xl md:text-3xl text-white/80 m-0">Projects you can contribute</h2>
+      <div
+        class="w-full float-left flex md-lt:flex-col items-center md:space-x-20 md-lt:space-y-16 py-6 md:py-16 contribute-bg">
+        <div class="py-4 float-left flex flex-col space-y-8">
+          <div class="flex float-left">
+            <img class="mr-5 float-left" src="assets/images/icons/block-icon.svg">
+            <p class="font-medium text-lg md:text-xl text-white/80">Send e-mail using <a
+                href="https://store.appblocks.com/details/readme/EXHcztuWkJfWKW0YejuqU" target="_blank"
+                class="text-secondary hover:underline">nodemailer</a>
+              <span class="text-white/40">node.js</span></p>
+          </div>
+          <div class="flex float-left">
+            <img class="mr-5 float-left" src="assets/images/icons/block-icon.svg">
+            <p class="font-medium text-lg md:text-xl text-white/80">SMS using <a
+                href="https://store.appblocks.com/details/readme/Rphe-jAApTMH8UIGoFqt7" target="_blank"
+                class="text-secondary hover:underline">Twilio</a> - Function Block
+              <span class="text-white/40">node.js</span></p>
+          </div>
+          <div class="flex float-left">
+            <img class="mr-5 float-left" src="assets/images/icons/block-icon.svg">
+            <p class="font-medium text-lg md:text-xl text-white/80">Send e-mail using <a
+                href="https://store.appblocks.com/details/readme/TqL4OOWIP3k6g4GM1Ijx-" target="_blank"
+                class="text-secondary hover:underline">nodemailer</a> - Gmail
+              <span class="text-white/40">node.js</span></p>
+          </div>
+        </div>
+        <a href="https://github.com/appblocks-hub/Challenges" target="_blank"
+          class="text-base font-bold text-white flex items-center flex-shrink-0">See All Projects <img class="ml-4"
+            src="./assets/images/icons/arrow-green-icon.svg" /></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="w-full float-left py-10 md:py-20 px-4 md:px-6 lg:px-10 xl:px-16">
+    <div class="max-w-[1040px] w-full mx-auto clearfix">
+      <div class="seperator-gradient w-full h-3 opacity-70 float-left mb-20"></div>
+      <div class="w-full grid sm:grid-cols-2 gap-x-10 gap-y-16 mt-16">
+        <div class="flex flex-col text-white/80 space-y-10">
+          <img class="max-w-[52px]" src="assets/images/icons/like-icon.svg" />
+          <p class="text-lg md:text-xl font-medium">20 top-scoring devs get awesome swags.
+            Select contributors receive t-shirts,
+            stickers, and more</p>
+        </div>
+        <div class="flex flex-col text-white/80 space-y-10">
+          <img class="max-w-[52px]" src="assets/images/icons/smile-icon.svg" />
+          <p class="text-lg md:text-xl font-medium">Top contributors stand to win prizes from team Appblocks and
+            Hacktoberfest.</p>
+        </div>
+      </div>
+      <p class="w-full float-left mt-12 text-center text-xl text-white font-medium">Fest ends this <span
+          class="text-secondary">October 31</span>. Hurry up!
+      </p>
+      <div class="w-full float-left mt-6 md:mt-12 flex justify-center flex-wrap">
+        <a href="https://hacktoberfest-register.appblocks.com/" target="_blank"
+          class="mx-3 md-lt:my-2 clip-path-button transition-all bg-gradient-purple float-left p-px">
+          <span
+            class="w-full bg-[#242424] hover:text-primary hover:bg-white px-5 py-1.5 h-full float-left flex justify-center items-center clip-path-button text-base text-white font-medium">Register
+            Now</span>
+        </a>
+        <a target="_blank" href="https://discord.com/invite/b7YSVvHp2x"
+          class="mx-3 md-lt:my-2 float-left clip-path-button text-white bg-primary hover:bg-[#fff] hover:text-primary border border-transparent hover:border-[#6F42C1] transition-all px-5 py-2">Join
+          Discord</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="w-full float-left py-10 md:py-20 px-4 md:px-6 lg:px-10 xl:px-16">
+    <div class="max-w-[1040px] w-full mx-auto clearfix">
+      <h2 class="flexa-medium text-2xl md:text-3xl text-center text-white/80 m-0">What the T#CH?</h2>
+      <div class="w-full grid md:grid-cols-2 gap-x-10 gap-y-16 mt-16">
+        <div class="flex flex-col space-y-4 items-center">
+          <div class="w-full float-left p-0.5 overflow-hidden bg-gradient-purple main-video-wrapper">
+            <div class="w-full h-full float-left main-video-inner">
+              <div class="youtube-player w-full h-full" data-id="XiI7nYm2DGw"></div>
+            </div>
+          </div>
+          <div class="flex flex-col items-center text-center text-white/80 space-y-3">
+            <p class="text-xl font-medium">Appblocks?</p>
+            <p class="text-base">Why we created Appblocks?<br />
+              Blocks and Blocks Architecture.</p>
+          </div>
+        </div>
+        <div class="flex flex-col space-y-4 items-center">
+          <div class="w-full float-left p-0.5 overflow-hidden bg-gradient-purple main-video-wrapper">
+            <div class="w-full h-full float-left main-video-inner">
+              <div class="youtube-player w-full h-full" data-id="VKS_CbOZWak"></div>
+            </div>
+          </div>
+          <div class="flex flex-col items-center text-center text-white/80 space-y-3">
+            <p class="text-xl font-medium">Blocks Architecture?</p>
+            <p class="text-base">Block, Types of Blocks, Blocks<br />
+              Architecture and Tools Overview</p>
+          </div>
+        </div>
+        <div class="flex flex-col space-y-4 items-center">
+          <div class="w-full float-left p-0.5 overflow-hidden bg-gradient-purple main-video-wrapper">
+            <div class="w-full h-full float-left main-video-inner">
+              <div class="youtube-player w-full h-full" data-id="mDOGOv6aT-E"></div>
+            </div>
+          </div>
+          <div class="flex flex-col items-center text-center text-white/80 space-y-3">
+            <p class="text-xl font-medium">Appblocks Tools</p>
+            <p class="text-base">Introduction to BB CLI, Tools,<br />
+              Blocks Store and Blocks Creation</p>
+          </div>
+        </div>
+        <div class="flex flex-col space-y-4 items-center">
+          <div class="w-full float-left p-0.5 overflow-hidden bg-gradient-purple main-video-wrapper">
+            <div class="w-full h-full float-left main-video-inner">
+              <div class="youtube-player w-full h-full" data-id="AAAPz_wew1o"></div>
+            </div>
+          </div>
+          <div class="flex flex-col items-center text-center text-white/80 space-y-3">
+            <p class="text-xl font-medium">How to contribute to Appblocks?</p>
+            <p class="text-base">Introduction to BB CLI, Tools,<br />
+              Blocks Store and Blocks Creation</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<script>
+  const observerOptions = {
+    root: null,
+    rootMargin: "0px",
+    threshold: 0.7,
+  };
+
+  function observerCallback(entries, observer) {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        // fade in observed elements that are in view
+        entry.target.classList.replace("fadeOut", "fadeIn");
+      } else {
+        // fade out observed elements that are not in view
+        entry.target.classList.replace("fadeIn", "fadeOut");
+      }
+    });
+  }
+
+  const observer = new IntersectionObserver(observerCallback, observerOptions);
+
+  const fadeElms = document.querySelectorAll(".fade");
+  fadeElms.forEach((el) => observer.observe(el));
+
+
+
+  //   Youtube VideoPlayer
+  function labnolIframe(div) {
+    var iframe = document.createElement("iframe");
+    iframe.setAttribute(
+      "src",
+      "https://www.youtube.com/embed/" + div.dataset.id + "?autoplay=1&rel=0"
+    );
+    iframe.setAttribute("frameborder", "0");
+    iframe.setAttribute("allowfullscreen", "1");
+    iframe.setAttribute(
+      "allow",
+      "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+    );
+    div.parentNode.replaceChild(iframe, div);
+  }
+
+  function initYouTubeVideos() {
+    var playerElements = document.getElementsByClassName("youtube-player");
+    for (var n = 0; n < playerElements.length; n++) {
+      var videoId = playerElements[n].dataset.id;
+      var div = document.createElement("div");
+      div.setAttribute("data-id", videoId);
+      var thumbNode = document.createElement("img");
+      thumbNode.src = "https://i.ytimg.com/vi/ID/hqdefault.jpg".replace(
+        "ID",
+        videoId
+      );
+      div.appendChild(thumbNode);
+      var playButton = document.createElement("div");
+      playButton.setAttribute("class", "play");
+      div.appendChild(playButton);
+      div.onclick = function () {
+        labnolIframe(this);
+      };
+      playerElements[n].appendChild(div);
+    }
+  }
+
+  document.addEventListener("DOMContentLoaded", initYouTubeVideos);
+</script>
+            
+
+<footer class="w-full float-left bg-[#242424]">
+  <div class="w-full float-left bg-[url(../images/icons/footer-bg.svg)] bg-repeat-x bg-[left_top_-24px] px-4 md:px-6 lg:px-10 xl:px-16">
+    <div class="max-w-7xl w-full mx-auto clearfix">
+      <div class="w-full flex md-lt:flex-col md-lt:space-y-6 md:justify-between md:space-x-4 md-lt:py-8 md:pt-28 md:pb-16">
+        <div class="float-left">
+          <p class="w-full text-base zirkon-regular text-white mb-5 md-lt:mb-0 float-left">
+            Appblocks
+          </p>
+          <ul class="w-full float-left [&>li>a]:text-base [&>li]:font-medium [&>li]:text-white [&>li]:mt-3">
+              <li>
+                Share and reuse prebuilt Blocks,<br/>
+Standardise app development.
+              </li>
+          </ul>
+        </div>
+        <div class="float-left">
+          <p class="w-full text-base zirkon-regular text-white mb-5 md-lt:mb-0 float-left">
+            Community
+          </p>
+          <ul class="w-full float-left [&>li>a]:text-base [&>li>a]:font-medium [&>li>a]:text-white [&>li]:mt-3">
+            <li>
+              <a class="hover:underline" href="https://discord.gg/74QGSVxF" target="_blank">Discord</a>
+            </li>
+            <li>
+              <a class="hover:underline" href="https://twitter.com/Appblocksapp" target="_blank">X (Twitter)</a>
+            </li>
+            <li>
+              <a class="hover:underline" href="https://github.com/appblocks-hub" target="_blank">GitHub</a>
+            </li>
+          </ul>
+        </div>
+        <div class="float-left">
+          <p class="w-full text-base zirkon-regular text-white mb-5 md-lt:mb-0 float-left">
+            Contact Us
+          </p>
+          <ul class="w-full float-left [&>li>a]:text-base [&>li>a]:font-medium [&>li>a]:text-white [&>li]:mt-3">
+            <li>
+              <a class="hover:underline" href="mailto:support@appblocks.com" target="_blank">support@appblocks.com</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div
+        class="flex w-full float-left flex-col md:flex-row space-y-4 md:space-y-0 justify-between items-center py-5 border-t border-ab-gray-dark">
+        <a href="/" class="float-left flex-shrink-0" aria-label="Appblock Home page"><img width="144" height="32"
+            alt="Logo" src="../../assets/images/logo-footer.svg" /></a>
+        <p class="flex-grow text-center text-sm my-1 zirkon-regular text-white px-2">
+          Copyright Ⓒ Appblocks 2023 | All rights reserved
+        </p>
+        <div class="flex justify-center items-center flex-wrap text-white space-x-2">
+          <a class="cursor-pointer my-1 group" target="_blank" aria-label="linkedin"
+            href="https://www.linkedin.com/company/89235117/admin/">
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <g clip-path="url(#clip0_5582_13927)">
+                <path class="group-hover:opacity-80 transition-all"
+                  d="M11.56 9.78218C11.56 10.7624 10.937 11.5644 9.77998 11.5644C8.71199 11.5644 8 10.7624 8 9.87129C8 8.89109 8.71199 8 9.77998 8C10.848 8 11.56 8.80198 11.56 9.78218Z"
+                  fill="#ffffff" />
+                <path class="group-hover:opacity-80 transition-all" d="M11.5598 12.4456H8.00977V24H11.5598V12.4456Z"
+                  fill="#ffffff" />
+                <path class="group-hover:opacity-80 transition-all"
+                  d="M20.0841 12.6238C18.2151 12.6238 17.157 13.6931 16.712 14.406H16.623L16.445 12.8911H13.251C13.251 13.8713 13.34 15.0198 13.34 16.3565V24H16.89V17.6931C16.89 17.3366 16.89 17.0693 16.979 16.802C17.246 16.1782 17.691 15.3763 18.67 15.3763C19.916 15.3763 20.45 16.4456 20.45 17.8614V23.9901H24V17.4159C23.9902 14.1287 22.2992 12.6238 20.0841 12.6238Z"
+                  fill="#ffffff" />
+              </g>
+              <defs>
+                <clipPath id="clip0_5582_13927">
+                  <rect width="32" height="32" fill="white" />
+                </clipPath>
+              </defs>
+            </svg>
+          </a>
+          <a class="cursor-pointer my-1 group" target="_blank" aria-label="facebook"
+            href="https://www.facebook.com/profile.php?id=100086034980312">
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <g clip-path="url(#clip0_5582_13928)">
+                <path class="group-hover:opacity-80 transition-all"
+                  d="M19.4131 10.228H20.9911V7H18.6152C15.2465 7 13.6418 8.88508 13.6418 11.5709V14.1149H11V17.1844H13.6418V25H17.6046V17.1844H20.2465L21 14.1149H17.6135V12.013C17.6046 11.1622 18.1011 10.228 19.4131 10.228Z"
+                  fill="#ffffff" />
+              </g>
+              <defs>
+                <clipPath id="clip0_5582_13928">
+                  <rect width="32" height="32" fill="white" />
+                </clipPath>
+              </defs>
+            </svg>
+          </a>
+          <a class="cursor-pointer my-1 group" target="_blank" aria-label="Twitter"
+            href="https://twitter.com/Appblocksapp">
+            <svg width="32" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M0.0415975 0L6.64178 8.82491L0 16H1.49492L7.30992 9.71796L12.0081 16H17.095L10.1233 6.67879L16.3055 0H14.8106L9.45547 5.78545L5.1285 0H0.0415975ZM2.23994 1.10103H4.57684L14.8964 14.899H12.5595L2.23994 1.10103Z" fill="white"/>
+</svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+    </body>
+</html>
