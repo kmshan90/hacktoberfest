@@ -46,7 +46,7 @@ body {
     }
     &.expanded-nav {
       .nav-menu-wrapper {
-        height: 166px;
+        height: 186px;
         padding-top: 16px;
         padding-bottom: 8px;
       }
@@ -297,4 +297,8 @@ body {
     clip-path: polygon(9% 0,100% 0,100% 84%,89% 100%,0 99%,0 14%);
     background-color: #242424;
   }
+}
+
+#techSection{
+  scroll-behavior: smooth;
 }

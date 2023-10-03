@@ -26,7 +26,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
 </noscript>
 <!-- End Google Tag Manager (noscript) -->
 
-            <header id="nav-header" class="w-full fixed top-0 left-0 bg-[#242424] z-50 px-4 md:px-6 lg:px-10 xl:px-16">
+            <header id="nav-header" class="w-full fixed top-0 left-0 bg-[#242424] z-50 px-4 md:px-6 lg:px-10 xl:px-16 md-lt:border-b border-white/20">
   <div
     class="max-w-7xl w-full mx-auto flex flex-wrap items-center justify-between min-h-[72px] py-[18px] relative">
     <a href="/" class="focus:outline-none flex items-center space-x-3"><img class="max-w-[72px]" src="../../assets/images/logo.svg"><img class="hidden lg:inline-block" src="../../assets/images/logo-txt.svg"></a>
@@ -37,17 +37,17 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
       <span class="hamburger-icon"></span>
     </button>
     <div id="navbar-responsive"
-      class="nav-menu-wrapper w-full md-lt:basis-full top-[72px] left-0 md:flex items-center md:w-auto md:space-x-3 md-lt:bg-[#110D17] md-lt:overflow-hidden">
+      class="nav-menu-wrapper w-full md-lt:basis-full top-[72px] left-0 md:flex items-center md:w-auto md:space-x-3 md-lt:bg-[#242424]s md-lt:overflow-hidden">
       <ul
         class="flex flex-col my-3 md:flex-row md:items-center md-lt:space-y-2 md:space-x-3 md:pl-2 md:my-0 text-white/80">
         <li>
-          <a href="#techSection" class="block hover:no-underline hover:bg-[#24292E] transition-all md:px-2 lg:px-4 py-2 text-base font-medium">What’s Appblocks</a>
+          <a href="#techSection" class="smooth-scroll-link block hover:no-underline hover:bg-[#24292E] transition-all md:px-2 lg:px-4 py-2 text-base font-medium">What’s Appblocks</a>
         </li>
         <li>
-          <a href="#opensource" class="block hover:no-underline hover:bg-[#24292E] transition-all md:px-2 lg:px-4 py-2 text-base font-medium">Projects to contribute</a>
+          <a href="#opensource" class="smooth-scroll-link block hover:no-underline hover:bg-[#24292E] transition-all md:px-2 lg:px-4 py-2 text-base font-medium">Projects to contribute</a>
         </li>
         <li>
-          <a href="https://hacktoberfest-register.appblocks.com/" target="_blank" class="block clip-path-button transition-all bg-gradient-purple float-left p-px">
+          <a href="https://hacktoberfest-register.appblocks.com/" target="_blank" class="block clip-path-button transition-all bg-gradient-purple float-left p-px md-lt:mt-2">
          <span class="bg-[#242424] hover:bg-white hover:text-primary px-5 py-1.5 h-full float-left flex justify-center items-center clip-path-button text-base font-medium">Register Now</span>
         </a>
         </li>
@@ -59,6 +59,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
   function showmenu() {
     document.getElementById("nav-header").classList.toggle("expanded-nav");
   }
+  document.querySelectorAll('a.smooth-scroll-link').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const offsetTop = document.querySelector(this.getAttribute('href')).offsetTop - 40;
+        scroll({
+            top: offsetTop,
+            behavior: "smooth"
+        });
+    });
+});
 </script>
             
 <div class="w-full pt-[72px] min-h-[calc(100vh-230px)]">
@@ -111,7 +121,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
     </div>
   </section>
 
-  <section class="w-full float-left py-10 md:py-20 px-4 md:px-6 lg:px-10 xl:px-16">
+  <section id="opensource" class="w-full float-left py-10 md:py-20 px-4 md:px-6 lg:px-10 xl:px-16">
     <div class="max-w-[1040px] w-full mx-auto clearfix">
       <h2 class="flexa-medium text-2xl md:text-3xl text-white/80 m-0 flex items-center">We &nbsp;<img
           src="./assets/images/icons/love-icon.svg" />&nbsp;
@@ -161,7 +171,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
     <div class="max-w-[1040px] w-full mx-auto clearfix">
       <h2 class="flexa-medium text-2xl md:text-3xl text-white/80 m-0">Projects you can contribute</h2>
       <div
-        class="w-full float-left flex md-lt:flex-col items-center md:space-x-20 md-lt:space-y-16 py-6 md:py-16 contribute-bg">
+        class="w-full float-left flex md-lt:flex-col items-center md:space-x-20 md-lt:space-y-8 py-4 md:py-16 contribute-bg">
         <div class="py-4 float-left flex flex-col space-y-8">
           <div class="flex float-left">
             <img class="mr-5 float-left" src="assets/images/icons/block-icon.svg">
@@ -194,7 +204,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
 
   <section class="w-full float-left py-10 md:py-20 px-4 md:px-6 lg:px-10 xl:px-16">
     <div class="max-w-[1040px] w-full mx-auto clearfix">
-      <div class="seperator-gradient w-full h-3 opacity-70 float-left mb-20"></div>
+      <div class="seperator-gradient w-full h-3 opacity-70 float-left mb-16 md:mb-20"></div>
       <div class="w-full grid sm:grid-cols-2 gap-x-10 gap-y-16 mt-16">
         <div class="flex flex-col text-white/80 space-y-10">
           <img class="max-w-[52px]" src="assets/images/icons/like-icon.svg" />
@@ -225,10 +235,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
     </div>
   </section>
 
-  <section class="w-full float-left py-10 md:py-20 px-4 md:px-6 lg:px-10 xl:px-16">
+  <section id="techSection" class="w-full float-left py-10 md:py-20 px-4 md:px-6 lg:px-10 xl:px-16">
     <div class="max-w-[1040px] w-full mx-auto clearfix">
       <h2 class="flexa-medium text-2xl md:text-3xl text-center text-white/80 m-0">What the T#CH?</h2>
-      <div class="w-full grid md:grid-cols-2 gap-x-10 gap-y-16 mt-16">
+      <div class="w-full grid md:grid-cols-2 gap-x-10 gap-y-16 mt-10 md:mt-16">
         <div class="flex flex-col space-y-4 items-center">
           <div class="w-full float-left p-0.5 overflow-hidden bg-gradient-purple main-video-wrapper">
             <div class="w-full h-full float-left main-video-inner">
@@ -359,7 +369,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
           <p class="w-full text-base zirkon-regular text-white mb-5 md-lt:mb-0 float-left">
             Appblocks
           </p>
-          <ul class="w-full float-left [&>li>a]:text-base [&>li]:font-medium [&>li]:text-white [&>li]:mt-3">
+          <ul class="w-full float-left [&>li]:text-sm [&>li]:sm:text-base [&>li]:font-medium [&>li]:text-white [&>li]:mt-3">
               <li>
                 Share and reuse prebuilt Blocks,<br/>
 Standardise app development.
@@ -370,7 +380,7 @@ Standardise app development.
           <p class="w-full text-base zirkon-regular text-white mb-5 md-lt:mb-0 float-left">
             Community
           </p>
-          <ul class="w-full float-left [&>li>a]:text-base [&>li>a]:font-medium [&>li>a]:text-white [&>li]:mt-3">
+          <ul class="w-full float-left [&>li>a]:text-sm [&>li>a]:sm:text-base [&>li>a]:font-medium [&>li>a]:text-white [&>li]:mt-3">
             <li>
               <a class="hover:underline" href="https://discord.gg/74QGSVxF" target="_blank">Discord</a>
             </li>
@@ -386,7 +396,7 @@ Standardise app development.
           <p class="w-full text-base zirkon-regular text-white mb-5 md-lt:mb-0 float-left">
             Contact Us
           </p>
-          <ul class="w-full float-left [&>li>a]:text-base [&>li>a]:font-medium [&>li>a]:text-white [&>li]:mt-3">
+          <ul class="w-full float-left [&>li>a]:text-sm [&>li>a]:sm:text-base [&>li>a]:font-medium [&>li>a]:text-white [&>li]:mt-3">
             <li>
               <a class="hover:underline" href="mailto:support@appblocks.com" target="_blank">support@appblocks.com</a>
             </li>
